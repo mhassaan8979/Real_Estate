@@ -1,7 +1,6 @@
 import pickle
 import json
 import numpy as np
-import os
 
 __locations = None
 __data_columns = None
@@ -28,7 +27,6 @@ def load_saved_artifacts():
     print("loading saved artifacts...start")
     global  __data_columns
     global __locations
-
 
     with open("static/columns.json", "r") as f:
         __data_columns = json.load(f)['data_columns']
